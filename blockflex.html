@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гумова блокова верстка</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 100px 1fr;
+            grid-template-areas:
+                "header header"
+                "sidebar-left content"
+                "footer footer";
+            position: relative;
+        }
+
+        #header {
+            grid-area: header;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 2em;
+        }
+
+        #sidebar-left {
+            grid-area: sidebar-left;
+            background-color: yellow;
+            border-right: 1px solid black;
+        }
+
+        #content {
+            grid-area: content;
+            background-color: white;
+        }
+
+        #footer {
+            grid-area: footer;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 2em;
+        }
+
+        #sidebar-right {
+            position: absolute; /* Виведено з сітки */
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            border-left: 1px solid black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">1</div>
+    <div id="sidebar-left">2</div>
+    <div id="content">4</div>
+    <div id="footer">3</div>
+    <div id="sidebar-right"></div>
+</body>
+</html>

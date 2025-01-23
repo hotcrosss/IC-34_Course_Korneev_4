@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: cyan;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .nav-links button {
+            width: 100px;
+            height: 50px;
+            background-color: gray;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .nav-extra {
+            display: flex;
+            gap: 10px;
+            width: 100px;
+            height: 50px;
+            border-radius: 15px;
+            margin-right: 50px;
+        }
+
+        main {
+            flex: 1;
+            background-color: teal;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .section-full-screen {
+            flex-grow: 1;
+            background-color: darkcyan;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .section-full-screen h1 {
+            font-size: 40px;
+            color: white;
+        }
+
+        .container-opys {
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: yellow;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .footer-nav {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        h1, p {
+            margin: 0;
+        }
+
+        /* Адаптивні стилі */
+        @media (max-width: 768px) {
+            .section-full-screen h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-full-screen h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Logo</div>
+        
+        <!-- 5 кнопок по центру -->
+        <nav class="nav-links">
+            <button>BUTTON</button>
+            <button>BUTTON</button>
+            <button>BUTTON</button>
+            <button>BUTTON</button>
+            <button>BUTTON</button>
+        </nav>
+
+        <!-- Дві кнопки справа -->
+        <div class="nav-extra">
+            <button>BUTTON</button>
+            <button>BUTTON</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-full-screen">
+            <h1>MAIN CONTENT</h1>
+        </section>
+
+        <section class="container-opys">
+            ОПИС: Підтримка менторів | Більше 1000+ студентів | 20% теорії, 80% практики
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">Logo</div>
+        <div class="footer-nav">Навігація</div>
+    </footer>
+
+</body>
+
+</html>

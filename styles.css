@@ -1,0 +1,319 @@
+/* Основні налаштування */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #37383C;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Перша секція, яка займає весь екран */
+.section-full-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вирівнювання по вертикалі */
+    align-items: center; /* Вирівнювання по горизонталі */
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(158,79,210,1) 12%, rgba(29,109,253,1) 62%, rgba(69,252,133,1) 100%);
+    text-align: center;
+}
+
+/* Основний контейнер для тексту і кнопки */
+.container-main > h1 {
+    font-size: 60px;
+    font-family: sans-serif;
+    margin-bottom: 40px;
+}
+
+#Info_button {
+    display: inline-block;
+    margin: 20px auto;
+    text-decoration: none;
+    background-color: orangered;
+    padding: 15px 20px;
+    border-radius: 25px;
+    color: white;
+}
+
+/* Блок опису (підтримка менторів та інше) */
+.container-opys {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.container-opys p {
+    background-color: #ddd;
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+
+/* Порожня секція, яка займає весь екран */
+.section-full-screen-empty {
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(158,79,210,1) 12%, rgba(29,109,253,1) 62%, rgba(69,252,133,1) 100%);
+}
+
+/* Основні стилі хедера */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000;
+    color: #fff;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+    border: 1px solid white;
+}
+
+/* Випадаюче меню */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    text-align: center;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: #5f6066;
+}
+
+.show {
+    display: block;
+}
+
+/* Кнопки */
+.buttons .btn {
+    padding: 8px 15px;
+    border: 2px solid #1e90ff;
+    border-radius: 25px;
+    color: #1e90ff;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttons .btn:hover {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.buttons .btn-primary {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.buttons .btn-primary:hover {
+    background-color: #1576d2;
+}
+
+/* Футер */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    border-top: 5px solid #fff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 400px;
+}
+
+.foot-ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.foot-ul a {
+    color: rgb(156, 192, 192);
+    text-decoration: none;
+}
+
+.hh {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Адаптивні стилі */
+@media (max-width: 1024px) {
+    /* Робимо текст і контейнери меншими для планшетів */
+    .container-main > h1 {
+        font-size: 45px;
+    }
+
+    #Info_button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .container-opys p {
+        padding: 8px 12px;
+    }
+
+    .header {
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .buttons .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        width: 300px;
+    }
+
+    .foot-ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Для мобільних пристроїв */
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container-main > h1 {
+        font-size: 35px;
+    }
+
+    #Info_button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .container-opys {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttons .btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        width: 250px;
+    }
+
+    .foot-ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Для дуже маленьких екранів */
+    .container-main > h1 {
+        font-size: 25px;
+    }
+
+    #Info_button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .container-opys p {
+        padding: 6px 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .buttons .btn {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    .footer-logo img {
+        width: 200px;
+    }
+
+    .foot-ul {
+        gap: 3px;
+    }
+}
