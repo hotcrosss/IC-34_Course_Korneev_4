@@ -317,3 +317,134 @@ footer {
         gap: 3px;
     }
 }
+/* Стиль для форми */
+form {
+    background-color: rgba(255, 255, 255, 0.1); /* Напівпрозорий фон */
+    padding: 20px;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тінь */
+    text-align: left;
+    color: black;
+    font-size: 16px;
+}
+
+/* Стиль для підписів форми */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: grey;
+}
+
+/* Стиль для полів вводу */
+form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Зміна кольору при наведенні на поля */
+form input:focus {
+    outline: none;
+    border: 2px solid #1e90ff;
+}
+
+/* Стиль для кнопки */
+form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e90ff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Зміна кольору кнопки при наведенні */
+form button:hover {
+    background-color: #1576d2;
+}
+
+/* Стиль для тексту результату */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+/* Стиль для форми покупки дроїдів */
+#transaction-form {
+    background-color: rgba(255, 255, 255, 0.1); /* Напівпрозорий фон */
+    padding: 20px;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тінь */
+    text-align: left;
+    color: black;
+    font-size: 16px;
+}
+
+/* Стиль для підписів форми */
+#transaction-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: grey;
+}
+
+/* Поля вводу */
+#transaction-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопка */
+#transaction-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e90ff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Результат */
+#transaction-result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+#shipping-form-container {
+    display: flex;
+    gap: 20px; /* Відстань між формами */
+    justify-content: center; /* Вирівнювання по горизонталі */
+    flex-wrap: wrap; /* Для адаптації на малих екранах */
+}
